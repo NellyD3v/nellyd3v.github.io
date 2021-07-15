@@ -1,0 +1,64 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+body {
+    background-color: black;
+}
+span {
+    position: fixed;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+section.main {
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: 2;
+}
+#bg {
+    transition: ease filter 0.8s, ease box-shadow 0.8s;
+    background-image: url("../assets/i.jpeg");
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    filter: blur(3px);
+}
+#overlay-top {
+    transition: ease-in-out height 0.8s;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #161617;
+}
+#overlay-bottom {
+    transition: ease-in-out height 0.8s;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #161617;
+}
+#description {
+    display: none;
+    z-index: 1;
+    background-color: #131314;
+    box-shadow: inset 0 0 10px black;
+    padding: 60px;
+}
+#description h1 {
+    display: inline;
+    font-size: 2rem;
+    border-bottom: solid 4px #1F1F20;
+    padding: 0 40px 0 0;
+}
